@@ -43,6 +43,18 @@ public class Programm {
         int minValueT3 = searchMinValueIntArr(arrForSearchMinValue);
         System.out.println("Минимальное значение: " + minValueT3);
 
+        // Task 4
+        System.out.println("Task4");
+        // input
+        System.out.println("input");
+        int[] arrSortT4 = createRandomIntArray(7);
+        System.out.println("Массив: " + Arrays.toString(arrSortT4));
+        //output
+        System.out.println("output");
+        System.out.println("Отсортированный по возрастанию массив: " + Arrays.toString(sortIntArr(arrSortT4)));
+
+
+
 
     }
 
@@ -76,6 +88,12 @@ public class Programm {
             }
         }
 
+        return result;
+    }
+
+    public static int[] sortIntArr(int[] arrForSort){
+        int[] result = arrForSort;
+        Arrays.sort(result);
         return result;
     }
 }
