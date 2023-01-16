@@ -53,6 +53,16 @@ public class Programm {
         System.out.println("output");
         System.out.println("Отсортированный по возрастанию массив: " + Arrays.toString(sortIntArr(arrSortT4)));
 
+        // Task 5
+        System.out.println("Task5");
+        // input
+        System.out.println("input");
+        int[] arrForReversT5 = createRandomIntArray(8);
+        System.out.println("Массив: " + Arrays.toString(arrForReversT5));
+        //output
+        System.out.println("output");
+        System.out.println("Отсортированный по убыванию массив: " + Arrays.toString(sortReverseIntArr(arrForReversT5)));
+
 
 
 
@@ -96,4 +106,18 @@ public class Programm {
         Arrays.sort(result);
         return result;
     }
+
+    public static int[] sortReverseIntArr (int[] arrForSortReverse){
+        int[] result = new int[arrForSortReverse.length];
+        int[] sortReverseArr = sortIntArr(arrForSortReverse);
+
+        int j = 0;
+        for (int i = sortReverseArr.length - 1; i >= 0; i--){
+            result[j] = sortReverseArr[i];
+            j++;
+        }
+
+        return result;
+    }
+
 }

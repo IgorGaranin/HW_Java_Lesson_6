@@ -6,6 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="6b9cb579-d7bf-41f5-a9e5-b579b61a7585" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/src/main/java/study/Programm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/study/Programm.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/study/Programm.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/study/Programm.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -67,7 +68,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1673844193502</updated>
-      <workItem from="1673844194861" duration="7911000" />
+      <workItem from="1673844194861" duration="9332000" />
     </task>
     <servers />
   </component>
@@ -96,5 +97,25 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <breakpoint enabled="true" type="java-exception">
+          <properties class="java.lang.ArrayIndexOutOfBoundsException" package="java.lang" />
+          <option name="timeStamp" value="5" />
+        </breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/study/Programm.java</url>
+          <line>56</line>
+          <option name="timeStamp" value="8" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/study/Programm.java</url>
+          <line>62</line>
+          <option name="timeStamp" value="9" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
