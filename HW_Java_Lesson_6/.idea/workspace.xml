@@ -6,9 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="6b9cb579-d7bf-41f5-a9e5-b579b61a7585" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/src/main/java/study/Programm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/study/Programm.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/HW_Java_Lesson_6-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/HW_Java_Lesson_6-1.0-SNAPSHOT.jar" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/study/Programm.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/study/Programm.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-archiver/pom.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-archiver/pom.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -70,7 +68,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1673844193502</updated>
-      <workItem from="1673844194861" duration="3519000" />
+      <workItem from="1673844194861" duration="4936000" />
     </task>
     <servers />
   </component>
@@ -99,16 +97,5 @@
         </entry>
       </map>
     </option>
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/study/Programm.java</url>
-          <line>30</line>
-          <option name="timeStamp" value="3" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>
