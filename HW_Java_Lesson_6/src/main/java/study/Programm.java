@@ -1,6 +1,7 @@
 package study;
 
 import java.util.Arrays;
+import java.util.Locale;
 
 public class Programm {
     public static void main(String[] args) {
@@ -87,7 +88,7 @@ public class Programm {
         System.out.printf("Строка :%s, символы: %s \n", inputStrT7, inputCht7);
         //output
         System.out.println("output");
-        System.out.println(deleteCharsInString(inputStrT7,'i','n','r'));
+        System.out.println(deleteCharsInString(inputStrT7, 'i', 'n', 'r'));
         System.out.println("////////////////////////////////////////////////\n");
 
         // Task 8
@@ -96,13 +97,24 @@ public class Programm {
         System.out.println("input");
 
         // output
+        System.out.println("output");
         System.out.println("1,2,4,8,15");
-        System.out.println(checkIntsForTheSumOfTheRest(1,2,4,8,15));
+        System.out.println(checkIntsForTheSumOfTheRest(1, 2, 4, 8, 15));
 
         System.out.println("1,2,4,8,16");
-        System.out.println(checkIntsForTheSumOfTheRest(1,2,4,8,16));
+        System.out.println(checkIntsForTheSumOfTheRest(1, 2, 4, 8, 16));
+        System.out.println("////////////////////////////////////////////////\n");
 
+        // Task 9
+        System.out.println("Task 9");
+        // input
+        System.out.println("input");
+        String strInputT9 = "привет мир!";
+        System.out.printf("Строка: %s \n", strInputT9);
 
+        // output
+        System.out.println("output");
+        System.out.println(checkVowelConsonants(strInputT9));
 
 
     }
@@ -128,7 +140,7 @@ public class Programm {
         return result;
     }
 
-    public static int searchMinValueIntArr(int[] arrForSearchMinValue){
+    public static int searchMinValueIntArr(int[] arrForSearchMinValue) {
         int result = arrForSearchMinValue[0];
 
         for (int i = 0; i < arrForSearchMinValue.length; i++) {
@@ -140,38 +152,38 @@ public class Programm {
         return result;
     }
 
-    public static int[] sortIntArr(int[] arrForSort){
+    public static int[] sortIntArr(int[] arrForSort) {
         int[] result = arrForSort;
         Arrays.sort(result);
         return result;
     }
 
-    public static int[] sortReverseIntArr (int[] arrForSortReverse){
+    public static int[] sortReverseIntArr(int[] arrForSortReverse) {
         int[] result = new int[arrForSortReverse.length];
         int[] sortReverseArr = sortIntArr(arrForSortReverse);
 
         int j = 0;
-        for (int i = sortReverseArr.length - 1; i >= 0; i--){
+        for (int i = sortReverseArr.length - 1; i >= 0; i--) {
             result[j] = sortReverseArr[i];
             j++;
         }
         return result;
     }
 
-    public static String deleteCharInString(String inputStr, char inputCh){
+    public static String deleteCharInString(String inputStr, char inputCh) {
         String result = "";
 
         char[] arrInputT6 = inputStr.toCharArray();
 
         for (int i = 0; i < arrInputT6.length; i++) {
-            if (arrInputT6[i] != inputCh){
+            if (arrInputT6[i] != inputCh) {
                 result = result + arrInputT6[i];
             }
         }
         return result;
     }
 
-    public static String deleteCharsInString(String inputStrT7,char... inputChars) {
+    public static String deleteCharsInString(String inputStrT7, char... inputChars) {
 
         String result = "";
         boolean symbolIsFined = false;
@@ -181,14 +193,14 @@ public class Programm {
         for (int i = 0; i < arrInputT7.length; i++) {
 
             symbolIsFined = false;
-            for (char ch: inputChars) {
-                if(ch == arrInputT7[i]){
+            for (char ch : inputChars) {
+                if (ch == arrInputT7[i]) {
                     symbolIsFined = true;
                     break;
                 }
             }
 
-            if (symbolIsFined != true){
+            if (symbolIsFined != true) {
                 result = result + arrInputT7[i];
             }
 
@@ -200,11 +212,11 @@ public class Programm {
         boolean result = false;
         int summElements = 0;
 
-        for (int i = 0; i < numbersT8.length; i++){
+        for (int i = 0; i < numbersT8.length; i++) {
             summElements = 0;
 
-            for (int j = 0; j < numbersT8.length; j++){
-                if (j != i){
+            for (int j = 0; j < numbersT8.length; j++) {
+                if (j != i) {
                     summElements = summElements + numbersT8[j];
                 }
             }
@@ -217,4 +229,34 @@ public class Programm {
         return result;
     }
 
+    public static String checkVowelConsonants(String strInputT9) {
+        String result = "";
+
+        String vowels = "ёуеыаоэяию";
+        String consonats = "йцкнгшщзхъфвпрлджчсмтьб";
+
+        char[] arrForSearch = strInputT9.toCharArray();
+
+        int counterVowels = 0, counterConsonats = 0;
+
+        for (char ch : arrForSearch) {
+
+            if(vowels.indexOf(ch) != -1){
+                counterVowels++;
+            }
+            else if (consonats.indexOf(ch) != -1) {
+                counterConsonats++;
+            }
+            else continue;
+        }
+
+        if (counterVowels > counterConsonats){
+            result = "Гласных больше";
+        } else if (counterVowels < counterConsonats){
+            result = "Согласных больше";
+        } else
+            result = "Одинаково";
+
+        return result;
+    }
 }
