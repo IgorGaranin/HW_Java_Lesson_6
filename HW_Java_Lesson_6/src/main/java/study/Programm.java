@@ -42,6 +42,7 @@ public class Programm {
         System.out.println("output");
         int minValueT3 = searchMinValueIntArr(arrForSearchMinValue);
         System.out.println("Минимальное значение: " + minValueT3);
+        System.out.println("////////////////////////////////////////////////\n");
 
         // Task 4
         System.out.println("Task4");
@@ -52,6 +53,7 @@ public class Programm {
         //output
         System.out.println("output");
         System.out.println("Отсортированный по возрастанию массив: " + Arrays.toString(sortIntArr(arrSortT4)));
+        System.out.println("////////////////////////////////////////////////\n");
 
         // Task 5
         System.out.println("Task5");
@@ -62,6 +64,7 @@ public class Programm {
         //output
         System.out.println("output");
         System.out.println("Отсортированный по убыванию массив: " + Arrays.toString(sortReverseIntArr(arrForReversT5)));
+        System.out.println("////////////////////////////////////////////////\n");
 
         // Task 6
         System.out.println("Task 6");
@@ -71,7 +74,21 @@ public class Programm {
         char inputCht6 = 'i';
         System.out.printf("Строка: %s, символ %c \n", inputStrT6, inputCht6);
         //output
+        System.out.println("output");
         System.out.println(deleteCharInString(inputStrT6, inputCht6));
+        System.out.println("////////////////////////////////////////////////\n");
+
+        // Task 7
+        System.out.println("Task 7");
+        // input
+        System.out.println("input");
+        String inputStrT7 = "inputString";
+        String inputCht7 = "i,n,r";
+        System.out.printf("Строка :%s, символы: %s \n", inputStrT7, inputCht7);
+        //output
+        System.out.println("output");
+        System.out.println(deleteCharsInString(inputStrT7,'i','n','r'));
+
 
 
 
@@ -141,6 +158,31 @@ public class Programm {
             if (arrInputT6[i] != inputCh){
                 result = result + arrInputT6[i];
             }
+        }
+        return result;
+    }
+
+    public static String deleteCharsInString(String inputStrT7,char... inputChars) {
+
+        String result = "";
+        boolean symbolIsFined = false;
+
+        char[] arrInputT7 = inputStrT7.toCharArray();
+
+        for (int i = 0; i < arrInputT7.length; i++) {
+
+            symbolIsFined = false;
+            for (char ch: inputChars) {
+                if(ch == arrInputT7[i]){
+                    symbolIsFined = true;
+                    break;
+                }
+            }
+
+            if (symbolIsFined != true){
+                result = result + arrInputT7[i];
+            }
+
         }
         return result;
     }
