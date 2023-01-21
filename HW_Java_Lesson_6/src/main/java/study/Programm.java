@@ -88,10 +88,19 @@ public class Programm {
         //output
         System.out.println("output");
         System.out.println(deleteCharsInString(inputStrT7,'i','n','r'));
+        System.out.println("////////////////////////////////////////////////\n");
 
+        // Task 8
+        System.out.println("Task 8");
+        // input
+        System.out.println("input");
 
+        // output
+        System.out.println("1,2,4,8,15");
+        System.out.println(checkIntsForTheSumOfTheRest(1,2,4,8,15));
 
-
+        System.out.println("1,2,4,8,16");
+        System.out.println(checkIntsForTheSumOfTheRest(1,2,4,8,16));
 
 
 
@@ -186,4 +195,26 @@ public class Programm {
         }
         return result;
     }
+
+    public static boolean checkIntsForTheSumOfTheRest(int... numbersT8) {
+        boolean result = false;
+        int summElements = 0;
+
+        for (int i = 0; i < numbersT8.length; i++){
+            summElements = 0;
+
+            for (int j = 0; j < numbersT8.length; j++){
+                if (j != i){
+                    summElements = summElements + numbersT8[j];
+                }
+            }
+
+            if (numbersT8[i] == summElements) {
+                result = true;
+                break;
+            }
+        }
+        return result;
+    }
+
 }
