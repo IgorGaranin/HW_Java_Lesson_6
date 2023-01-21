@@ -63,6 +63,19 @@ public class Programm {
         System.out.println("output");
         System.out.println("Отсортированный по убыванию массив: " + Arrays.toString(sortReverseIntArr(arrForReversT5)));
 
+        // Task 6
+        System.out.println("Task 6");
+        // input
+        System.out.println("input");
+        String inputStrT6 = "inputString";
+        char inputCht6 = 'i';
+        System.out.printf("Строка: %s, символ %c \n", inputStrT6, inputCht6);
+        //output
+        System.out.println(deleteCharInString(inputStrT6, inputCht6));
+
+
+
+
 
 
 
@@ -116,8 +129,19 @@ public class Programm {
             result[j] = sortReverseArr[i];
             j++;
         }
-
         return result;
     }
 
+    public static String deleteCharInString(String inputStr, char inputCh){
+        String result = "";
+
+        char[] arrInputT6 = inputStr.toCharArray();
+
+        for (int i = 0; i < arrInputT6.length; i++) {
+            if (arrInputT6[i] != inputCh){
+                result = result + arrInputT6[i];
+            }
+        }
+        return result;
+    }
 }
