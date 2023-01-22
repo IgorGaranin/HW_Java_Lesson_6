@@ -115,6 +115,18 @@ public class Programm {
         // output
         System.out.println("output");
         System.out.println(checkVowelConsonants(strInputT9));
+        System.out.println("////////////////////////////////////////////////\n");
+
+        // Task 10
+        System.out.println("Task 10");
+        System.out.println("input");
+        String strArithmeticOperation = "2+2";
+        System.out.printf("Арифметическая операция: %s\n", strArithmeticOperation);
+
+        //output
+        System.out.println("output");
+        System.out.println(doArithmeticOperation(strArithmeticOperation));
+        System.out.println("////////////////////////////////////////////////\n");
 
 
     }
@@ -257,6 +269,47 @@ public class Programm {
         } else
             result = "Одинаково";
 
+        return result;
+    }
+
+    public static int doArithmeticOperation(String strArithmeticOperation){
+        int result = 0;
+
+        char[] arrSymbolsArithmetics = strArithmeticOperation.toCharArray();
+        String arithmeticSigns = "/*-+=";
+        String numbers = "0123456789";
+        String firstElement = "";
+        String secondElement = "";
+        String arithmeticSign = "";
+
+        for (int i = 0; i < arrSymbolsArithmetics.length; i++){
+
+            if ((numbers.indexOf(arrSymbolsArithmetics[i]) != -1) && arithmeticSign.equals("")) {
+                firstElement += arrSymbolsArithmetics[i];
+            }
+            else if (numbers.indexOf(arrSymbolsArithmetics[i]) != -1) {
+                secondElement += arrSymbolsArithmetics[i];
+            }
+            else if ((arithmeticSigns.indexOf(arrSymbolsArithmetics[i]) != -1) && arrSymbolsArithmetics[i] != '=') {
+                arithmeticSign += arrSymbolsArithmetics[i];
+            }
+            else if (arrSymbolsArithmetics[i] == '='){
+                break;
+            }
+            else {
+                continue;
+            }
+        }
+
+        if (arithmeticSign.equals("+")) {
+            result = Integer.parseInt(firstElement) + Integer.parseInt(secondElement);
+        } else if (arithmeticSign.equals("-")) {
+            result = Integer.parseInt(firstElement) - Integer.parseInt(secondElement);
+        } else if (arithmeticSign.equals("/")) {
+            result = Integer.parseInt(firstElement) / Integer.parseInt(secondElement);
+        } else if (arithmeticSign.equals("*")) {
+            result = Integer.parseInt(firstElement) * Integer.parseInt(secondElement);
+        }
         return result;
     }
 }
